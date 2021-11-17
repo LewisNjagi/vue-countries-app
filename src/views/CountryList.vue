@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <b-container>
-      <b-row>
+      <b-row cols="4">
         <CountryCard
           v-for="country in countries"
           :key="country.id"

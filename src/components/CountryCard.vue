@@ -9,10 +9,13 @@
           img-top
           tag="article"
           style="max-width: 20rem"
-          class="mb-2"
+          class="mb-3"
         >
           <b-card-text v-if="country.capital"
             >Capital City: {{ country.capital[0] }}</b-card-text
+          >
+          <b-card-text
+            >Population: {{ country.population }} million</b-card-text
           >
 
           <b-button href="#" variant="primary">Go somewhere</b-button>
