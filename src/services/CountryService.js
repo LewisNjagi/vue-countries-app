@@ -13,4 +13,7 @@ export default {
   getCountries() {
     return apiClient.get("/all");
   },
+  getCountry(name) {
+    return apiClient.get("/name/" + name);
+  }
 };
