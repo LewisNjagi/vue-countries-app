@@ -13,9 +13,14 @@
 import CountryCard from "@/components/CountryCard.vue";
 
 export default {
-  name: "Home",
+  name: "CountryList",
   components: {
     CountryCard,
+  },
+  data() {
+    return {
+      countries: null,
+    }
   },
 };
 </script>
