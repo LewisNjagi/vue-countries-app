@@ -2,30 +2,24 @@
   <div class="hello">
     <b-col>
       <div>
-        <b-card
-          :title="name"
-          :img-src="flags"
-          img-alt="Image"
-          img-top
-          tag="article"
-          style="max-width: 20rem"
-          class="mb-3"
-        >
-          <b-card-text v-if="country.capital"
-            >Capital City: {{ country.capital[0] }}</b-card-text
-          >
-          <b-card-text
-            >Population: {{ country.population }} million</b-card-text
-          >
+        <b-card class="mt-3">
+          <b-card-img :src="country.flags.png" alt="Image" top></b-card-img>
+          <b-card-body>
+            <b-card-title>{{ country.name.official }}</b-card-title>
+            <b-card-text v-if="country.capital"
+              >Capital City: {{ country.capital[0] }}</b-card-text
+            >
+            <b-card-text>Population: {{ country.population }} </b-card-text>
 
-          <router-link
-            :to="{
-              name: 'CountryDetails',
-              params: { name: country.name.common },
-            }"
-          >
-            <b-button variant="primary">Go somewhere</b-button>
-          </router-link>
+            <router-link
+              :to="{
+                name: 'CountryDetails',
+                params: { name: country.name.common },
+              }"
+            >
+              <b-button variant="primary">View</b-button>
+            </router-link>
+          </b-card-body>
         </b-card>
       </div>
     </b-col>
@@ -37,14 +31,6 @@ export default {
   name: "CountryCard",
   props: {
     country: {
-      type: Object,
-      required: true,
-    },
-    name: {
-      type: Object,
-      required: true,
-    },
-    flags: {
       type: Object,
       required: true,
     },

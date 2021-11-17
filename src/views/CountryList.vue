@@ -1,13 +1,16 @@
 <template>
   <div class="home">
     <b-container>
+      <b-form-input
+        type="search"
+        placeholder="Search Countries"
+        v-model="search"
+      ></b-form-input>
       <b-row cols="4">
         <CountryCard
-          v-for="country in countries"
+          v-for="country in filteredCountries"
           :key="country.id"
           :country="country"
-          :name="country.name.official"
-          :flags="country.flags.png"
         ></CountryCard>
       </b-row>
     </b-container>
@@ -26,7 +29,8 @@ export default {
   },
   data() {
     return {
-      countries: null,
+      countries: [],
+      search: "",
     };
   },
   created() {
@@ -38,6 +42,13 @@ export default {
       .catch((error) => {
         console.log(error);
       });
+  },
+  computed: {
+    filteredCountries: function () {
+      return this.countries.filter((country) => {
+        return country.name.common.match(this.search);
+      });
+    },
   },
 };
 </script>
