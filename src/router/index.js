@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import CountryList from "../views/CountryList.vue";
+import CountryDetails from "../views/CountryDetails.vue";
 
 Vue.use(VueRouter);
 
@@ -9,6 +10,12 @@ const routes = [
     path: "/",
     name: "CountryList",
     component: CountryList,
+  },
+  {
+    path: "/country/:name",
+    name: "CountryDetails",
+    props: true,
+    component: CountryDetails,
   },
   {
     path: "/about",

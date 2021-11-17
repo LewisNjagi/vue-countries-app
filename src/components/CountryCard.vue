@@ -18,7 +18,14 @@
             >Population: {{ country.population }} million</b-card-text
           >
 
-          <b-button href="#" variant="primary">Go somewhere</b-button>
+          <router-link
+            :to="{
+              name: 'CountryDetails',
+              params: { name: country.name.common },
+            }"
+          >
+            <b-button variant="primary">Go somewhere</b-button>
+          </router-link>
         </b-card>
       </div>
     </b-col>
