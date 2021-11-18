@@ -1,11 +1,14 @@
 <template>
   <div class="home">
     <b-container>
-      <h2 class="text-left pt-2">Countries</h2>
+      <h2 class="text-left pt-2" style="font-family: 'Montserrat', sans-serif">
+        Countries
+      </h2>
       <b-form-input
         type="search"
         placeholder="Search for a country..."
         v-model="search"
+        style="font-family: 'Montserrat', sans-serif"
       ></b-form-input>
       <b-row cols="4">
         <CountryCard

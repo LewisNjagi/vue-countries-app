@@ -1,8 +1,8 @@
 <template>
   <div class="home">
     <b-container v-for="country in country" :key="country.id">
-      <h2 class="text-left mt-2">{{ country.name.common }}</h2>
-      <hr>
+      <h2 class="text-left pt-2">{{ country.name.common }}</h2>
+      <hr />
       <b-row class="mt-2">
         <b-col>
           <p>
@@ -145,3 +145,10 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.home {
+  background-color: rgb(250, 250, 250);
+  font-family: "Montserrat", sans-serif;
+}
+</style>

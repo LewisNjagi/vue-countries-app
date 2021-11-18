@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-navbar toggleable="lg" type="dark" variant="dark" class="py-3">
-      <b-navbar-brand href="/" class="ml-5">The world</b-navbar-brand>
+      <b-navbar-brand href="/" class="world ml-5">The world</b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -21,12 +21,18 @@ export default {};
 
 <style scoped>
 #nav a.router-link-exact-active {
-  color: rgb(157, 157, 157);
+  color: black;
 }
 #nav a {
-  color: black;
+  color: rgb(157, 157, 157);
+  font-family: "Montserrat", sans-serif;
 }
 .navbar.navbar-dark.bg-dark {
   background-color: white !important;
+}
+.world {
+  font-family: "Bebas Neue", cursive !important;
+  font-size: 30px;
+  color: black !important;
 }
 </style>
