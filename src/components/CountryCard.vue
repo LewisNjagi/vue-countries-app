@@ -2,10 +2,12 @@
   <div class="hello">
     <b-col>
       <div>
-        <b-card class="mt-3" style="font-family: 'Montserrat', sans-serif;">
+        <b-card class="mt-3" style="font-family: 'Montserrat', sans-serif">
           <b-card-img :src="country.flags.png" alt="Image" top></b-card-img>
           <b-card-body>
-            <b-card-title>{{ country.name.official }}</b-card-title>
+            <b-card-title
+              ><strong>{{ country.name.official }}</strong></b-card-title
+            >
             <b-card-text v-if="country.capital"
               ><strong>Capital:</strong> {{ country.capital[0] }}</b-card-text
             >

@@ -41,7 +41,7 @@ export default {
     CountryService.getCountries()
       .then((response) => {
         this.countries = response.data;
-        console.log("countries:", response.data);
+        this.country.name.official.sort();
       })
       .catch((error) => {
         console.log(error);
