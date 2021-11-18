@@ -1,10 +1,11 @@
 <template>
   <div class="home">
     <b-container v-for="country in country" :key="country.id">
-      <h2>{{ country.name.common }}</h2>
-      <b-row class="mt-4">
+      <h2 class="text-left mt-2">{{ country.name.common }}</h2>
+      <hr>
+      <b-row class="mt-2">
         <b-col>
-          <p class="mt-4">
+          <p>
             {{ country.name.common }}, officially the
             {{ country.name.official }}, is a country in
             {{ country.subregion }}. At {{ country.area }} square kilometres .
@@ -85,12 +86,6 @@
                       >{{ country.idd.root
                       }}{{ country.idd.suffixes[0] }}</b-col
                     >
-                  </b-row>
-                </b-list-group-item>
-                <b-list-group-item>
-                  <b-row>
-                    <b-col md="6">Gini (2015)</b-col>
-                    <b-col md="6">{{ country.gini[2015] }}</b-col>
                   </b-row>
                 </b-list-group-item>
                 <b-list-group-item>

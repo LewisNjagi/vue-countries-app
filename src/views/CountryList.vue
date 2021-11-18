@@ -1,9 +1,10 @@
 <template>
   <div class="home">
     <b-container>
+      <h2 class="text-left pt-2">Countries</h2>
       <b-form-input
         type="search"
-        placeholder="Search Countries"
+        placeholder="Search for a country..."
         v-model="search"
       ></b-form-input>
       <b-row cols="4">
@@ -52,3 +53,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.home {
+  background-color: rgb(250, 250, 250);
+}
+</style>

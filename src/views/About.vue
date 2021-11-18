@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-    <MazPhoneNumberInput v-model="phoneNumber" />
+    <b-container>
+      <h2>Validate Phone Number</h2>
+      <MazPhoneNumberInput v-model="phoneNumber" />
+    </b-container>
   </div>
 </template>
 
